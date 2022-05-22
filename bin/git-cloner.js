@@ -64,8 +64,9 @@ async function cloneRepos(octokit, org) {
             // do whatever you want with each response, break out of the loop, etc.
             for (let index = 0; index < response.data.length; index++) {
                 console.log(chalk.yellow(response.data[index].name));
-                const remote = `git@github.com:${org}/${response.data[index].name}`
-                console.log('Cloning: ${remote}')
+                //console.dir(response.data[index])
+                const remote = `git@github.com:${response.data[index].full_name}.git`
+                console.log(`Cloning: ${remote}`)
                 await simpleGit()
                     .clone(remote)
                     .then(() => console.log('Cloned'))
