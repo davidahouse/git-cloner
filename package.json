@@ -7,7 +7,7 @@
   "repository": "davidahouse/git-cloner",
   "preferGlobal": true,
   "bin": {
-    "octoglance": "bin/git-cloner.js"
+    "git-cloner": "bin/git-cloner.js"
   },
   "dependencies": {
     "@octokit/app": "^4.1.0",

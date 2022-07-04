@@ -16,6 +16,7 @@ const conf = require("rc-house")("git-cloner", {
 });
 
 let octokit = null;
+console.log(conf.githubAPIKey)
 
 if (settings.value("github", "public") === "public") {
     octokit = new Octokit({
